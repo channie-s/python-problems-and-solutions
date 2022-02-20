@@ -1,0 +1,72 @@
+$1. 遍历
+np.where(a>0,a,0)
+
+
+
+$2.展开所有numpy输出数据(默认由省略号表示中间部分)
+np.set_printoptions(threshold=np.inf)
+
+
+$3.如何为for loop计数
+count = 0
+for i in range(...):
+...
+...(operations)
+count += 1
+break #or return
+#还有其他更细节的用法,但这个是目前我认为的最general的方法,即针对任意for loop
+
+$4.for循环嵌套究竟是什么
+简单举例:
+for i in range(3):
+  for j in range(1):
+    print ('**************')
+    
+>>> **************
+    **************
+    **************
+ 
+ 
+$5.厄拉多塞筛法(寻找质数)
+  
+  def getPrimes(n):
+    if n < 2:
+        return []
+    output = [True] * (n+1)
+    output[0:2] = [False] * 2
+    for i in range(int(n**0.5+1)):
+        if output[i]:
+            output[i*i::i]=[False] * len(output[i*i::i])
+    return output
+
+p = getPrimes(10000)
+s = [i for i in range(1000, 10001) if p[i]]
+print(s)
+print(len(s))
+
+作者：包子
+链接：https://www.zhihu.com/question/491235599/answer/2161961363
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+    
+ 
+$6.我容易忘记的符号
+%取余
+**乘方
+
+
+$7.两原子衰变相互转化的程序模拟(c和py)
+https://www.jianshu.com/p/4838d81da5fb
+
+
+$8.对数组中的每个元素进行目标操作,即遍历,
+最简单的就是for i in range(list):
+
+
+$9.
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    
+    
+    
