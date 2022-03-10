@@ -63,10 +63,25 @@ $8.对数组中的每个元素进行目标操作,即遍历,
 最简单的就是for i in range(list):
 
 
-$9.
+$9.对于二维数组,需要:
+
+for i in range():
+  for j in range():
+    if ...:
+      a[i,j] == 1
+      
+      
+$10.对于一些需要遍历到第n+1个元素的程序,可能会出现‘The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()’
 
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$11.‘only integer scalar arrays can be converted to a scalar index’
+解决方法: 在报错的列表/数组前面套一个np.array()  不要忘记引入numpy(如果没引入的话)
+
+
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
     
     
     
